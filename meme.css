@@ -1,0 +1,175 @@
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(-45deg, #86868a, #646464, #a4a5a7, #bbbdc2);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite; /* Background animation */
+        }
+
+        .content {
+            text-align: center;
+            color: white;
+            z-index: 1;
+            position: relative;
+        }
+
+        .upload-area {
+            margin-top: 20px; /* Margin to push the button below the image */
+            display: flex;
+            justify-content: center; /* Center the button horizontally */
+        }
+
+        .upload-photo-button {
+            width: 200px;
+            height: 60px;
+            margin-top: -100px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-family: inherit;
+            border: none;
+            position: relative;
+            background-image: linear-gradient(to right, #671d7e 0%, #bb7be6 100%);
+            color: white;
+            cursor: pointer;
+            box-shadow: 6px 6px 12px #c205fc, -6px -6px 12px #911cff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .upload-photo-button .upload-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .upload-photo-button:hover {
+            background-image: linear-gradient(to right, #bb7be6 0%, #671d7e 100%);
+            transform: scale(1.05);
+        }
+
+        .my-photo-container {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .my-photo, .your-photo, .loading-icon {
+            width: 100%;
+            max-width: 300px; /* Photo width */
+            max-height: 300px;
+            margin-top: 20px;
+            display: block;
+            border-radius: 10px;
+            margin-top: 50px;
+            overflow: hidden;
+        }
+
+        .loading-icon {
+            display: none;
+            margin-bottom: 50px;
+            margin-top: 50px;
+            font-size: 2em;
+            color: white;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-download {
+            background-color: #3498db;
+        }
+
+        .btn-view {
+            background-color: #2ecc71;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        .photo-container {
+            display: inline-block;
+            padding: 0;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        .your-photo {
+            display: block;
+            width: 100%; /* Ensure the image fits within the container */
+            height: auto; /* Maintain the aspect ratio */
+            filter: blur(40px); /* Apply blur effect to the image */
+        }
+
+        .photo-container.no-border {
+            border: none; /* Hide border initially */
+        }
+
+        .photo-container.show-border {
+            border: 5px solid rgb(72, 255, 0); /* Green border */
+        }
+
+        .action-buttons {
+            display: none; /* Hide action buttons initially */
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+.p {
+color: #931fff;
+text-align: center;
+text-align: ;
+
+
+
+}
+.h {
+color: #8400ff;
+
+
+
+
+
+
+
+}
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>

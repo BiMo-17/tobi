@@ -1,0 +1,93 @@
+
+    <script type="text/javascript">
+        var Jqdeq_hDC_Vkhygc={"it"}:4332599,"key":"6f60c"};
+    </script>;
+    <script type="text/javascript" language="javascript">
+  // Supply ads personalization default for EEA readers
+  // See https://www.blogger.com/go/adspersonalization
+  adsbygoogle = window.adsbygoogle || [];
+  if (typeof adsbygoogle.requestNonPersonalizedAds === 'undefined') {
+    adsbygoogle.requestNonPersonalizedAds = 1;
+  }
+</script>
+<script>
+  const uploadInput = document.getElementById('upload-input');
+  const uploadedImage = document.getElementById('uploaded-image');
+  const myPhoto = document.querySelector('.my-photo');
+  const loadingIcon = document.querySelector('.loading-icon');
+  const uploadArea = document.querySelector('.upload-area');
+  const actionButtons = document.querySelector('.action-buttons');
+  const photoContainer = document.querySelector('.photo-container');
+
+
+
+  uploadInput.addEventListener('change', function() {
+      const file = this.files[0];
+      if (file) {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+              loadingIcon.style.display = 'block';
+              setTimeout(() => {
+                  uploadedImage.src = e.target.result;
+                  uploadedImage.style.display = 'block';
+                  uploadedImage.classList.add('show-border'); // Add the green border
+                  photoContainer.classList.remove('no-border');
+                  photoContainer.classList.add('show-border');
+                  myPhoto.style.display = 'none'; // Hide my photo after uploading your photo
+                  uploadArea.style.display = 'none'; // Hide the upload button
+                  actionButtons.style.display = 'flex'; // Show action buttons
+                  loadingIcon.style.display = 'none';
+              }, 4000); // Delay of 4 seconds
+          };
+          reader.readAsDataURL(file);
+      } else {
+          uploadedImage.src = '#';
+          uploadedImage.style.display = 'none';
+          photoContainer.classList.add('no-border'); // Ensure border is hidden
+      }
+  });
+
+  
+
+
+  
+  uploadedImage.addEventListener('load', function() {
+      myPhoto.style.display = 'none';
+  });
+  </script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function(event) {
+window.cookieChoices && cookieChoices.showCookieConsentBar && cookieChoices.showCookieConsentBar(
+  (window.cookieOptions && cookieOptions.msg) || 'This site uses cookies from Google to deliver its services and to analyze traffic. Your IP address and user-agent are shared with Google along with performance and security metrics to ensure quality of service, generate usage statistics, and to detect and address abuse.',
+  (window.cookieOptions && cookieOptions.close) || 'Got it',
+  (window.cookieOptions && cookieOptions.learn) || 'Learn More',
+  (window.cookieOptions && cookieOptions.link) || 'https://www.blogger.com/go/blogspot-cookies');
+});
+</script>
+
+
+<!-- 'It is your responsibility to notify your visitors about cookies used and data collected on your blog. Blogger makes a standard notification available for you to use on your blog, and you can customize it or replace with your own notice. See http://www.blogger.com/go/cookiechoices for more details.' -->
+<script src="/js/cookienotice.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(event) {
+window.cookieChoices && cookieChoices.showCookieConsentBar && cookieChoices.showCookieConsentBar(
+  (window.cookieOptions && cookieOptions.msg) || 'This site uses cookies from Google to deliver its services and to analyze traffic. Your IP address and user-agent are shared with Google along with performance and security metrics to ensure quality of service, generate usage statistics, and to detect and address abuse.',
+  (window.cookieOptions && cookieOptions.close) || 'Got it',
+  (window.cookieOptions && cookieOptions.learn) || 'Learn More',
+  (window.cookieOptions && cookieOptions.link) || 'https://www.blogger.com/go/blogspot-cookies');
+});
+</script>
+
+<!-- Statcounter code for sOsO http://www.img14.com on Blogger -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=13049413; 
+var sc_invisible=1; 
+var sc_security="17af0bff"; 
+//]]>
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter_xhtml.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" class="statcounter"><img class="statcounter" src="https://c.statcounter.com/13049413/0/17af0bff/1/" alt="Web Analytics" referrerPolicy="no-referrer-when-downgrade" /></a></div></noscript>
+<!-- End of Statcounter Code -->
